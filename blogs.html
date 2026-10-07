@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the Marvy Archive: In-depth essays on brutalist architecture, sensory industrial design, analog sound synthesis, and atelier rituals.">
+  <title>Dispatches & Archive — Marvy Editorial Journal</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23ff5733'/></svg>">
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress-bar"></div>
+
+  <!-- Top Editorial Ticker Tape -->
+  <div class="ticker-bar" aria-label="Editorial News Ticker">
+    <div class="ticker-track">
+      <div class="ticker-item"><span class="ticker-dot"></span> COMPLETE ARCHIVE // FILTER BY DISCIPLINE OR SEARCH KEYWORDS</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> BOOKMARK ARTICLES TO YOUR PRIVATE READING LIST</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> NO PAYWALLS // INDEPENDENTLY SUPPORTED JOURNAL</div>
+      <!-- Duplicate for infinite loop -->
+      <div class="ticker-item"><span class="ticker-dot"></span> COMPLETE ARCHIVE // FILTER BY DISCIPLINE OR SEARCH KEYWORDS</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> BOOKMARK ARTICLES TO YOUR PRIVATE READING LIST</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> NO PAYWALLS // INDEPENDENTLY SUPPORTED JOURNAL</div>
+    </div>
+  </div>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" id="site-brand-logo">
+        MARVY<span class="brand-dot"></span>
+        <span class="brand-tag">VOL. 14</span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+          <li><a href="blogs.html" class="nav-link active" id="nav-blogs">Blogs</a></li>
+          <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="blogs.html?filter=bookmarked" class="bookmark-counter-btn" id="bookmark-counter-btn" title="View Bookmarked Articles">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span>Saved</span>
+          <span class="badge-count badge-bookmark-count">0</span>
+        </a>
+        <a href="contact.html" class="btn-header-cta">Pitch Essay</a>
+        <button class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Overlay -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2.5rem;">
+        <span class="brand-logo" style="font-size: 1.4rem;">MARVY<span class="brand-dot"></span></span>
+        <button class="reader-close-btn" id="mobile-drawer-close" aria-label="Close Mobile Menu">✕</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home <span>→</span></a></li>
+        <li><a href="about.html" class="mobile-nav-link">About <span>→</span></a></li>
+        <li><a href="blogs.html" class="mobile-nav-link active">Blogs <span>→</span></a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact <span>→</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-mono text-muted" style="font-size: 0.75rem; margin-bottom: 1rem;">CRAFT & MATERIALITY ARCHIVE</p>
+      <a href="blogs.html?filter=bookmarked" class="btn-header-cta" style="width: 100%; justify-content: center;">View Saved Articles</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Section 1: Archive Header -->
+    <section class="page-intro-header" style="padding-bottom: var(--space-lg);">
+      <div class="container">
+        <span class="intro-eyebrow">Editorial Archive</span>
+        <h1 class="intro-headline" style="margin-bottom: 1rem;">The Complete Dispatches</h1>
+        <p class="intro-subheading">
+          Explore field reports, longform architectural critiques, material studies, and philosophical reflections.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Archive Controls Bar (Live Search & Categories & Layout Toggle) -->
+    <section class="archive-controls-bar" aria-label="Archive Controls">
+      <div class="container">
+        <div class="controls-inner">
+          
+          <!-- Live Instant Search -->
+          <div class="search-box-wrapper">
+            <svg class="search-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="archive-search-input" class="search-input" placeholder="Search dispatches, authors, tags..." aria-label="Search articles">
+            <button id="archive-search-clear" class="search-clear-btn" aria-label="Clear search">✕</button>
+          </div>
+
+          <!-- Category Chips -->
+          <div class="category-chips">
+            <button class="chip-btn category-chip-filter active" data-category="all">All</button>
+            <button class="chip-btn category-chip-filter" data-category="architecture">Architecture</button>
+            <button class="chip-btn category-chip-filter" data-category="design">Design</button>
+            <button class="chip-btn category-chip-filter" data-category="technology">Technology</button>
+            <button class="chip-btn category-chip-filter" data-category="culture">Culture</button>
+            <button class="chip-btn category-chip-filter" data-category="philosophy">Philosophy</button>
+          </div>
+
+          <!-- View Layout Toggle -->
+          <div class="view-layout-toggle" aria-label="Change layout">
+            <button class="btn-layout active" id="btn-view-grid" title="Magazine Grid View">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </button>
+            <button class="btn-layout" id="btn-view-list" title="Compact List View">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Articles Grid / List Container -->
+    <section class="editorial-section">
+      <div class="container">
+        
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2rem;">
+          <span class="font-mono text-muted" id="archive-count-display" style="font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase;">
+            Displaying Dispatches
+          </span>
+          <a href="#" onclick="resetArchiveFilters(); return false;" class="font-mono text-accent" style="font-size: 0.78rem;">
+            Clear All Filters
+          </a>
+        </div>
+
+        <!-- Rendered dynamically by script/main.js -->
+        <div class="magazine-grid" id="blogs-archive-container">
+          <!-- Populated from BLOG_POSTS dataset -->
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <span class="brand-logo" style="font-size: 1.5rem;">MARVY<span class="brand-dot"></span></span>
+          <p class="footer-brand-bio">
+            An independent publication championing architectural gravity, physical craft, and contemplative technology. Edited in London and Tokyo.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About & Manifesto</a></li>
+            <li><a href="blogs.html">Archive & Dispatches</a></li>
+            <li><a href="contact.html">Editorial Pitch & Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Taxonomy</div>
+          <ul class="footer-links-list">
+            <li><a href="blogs.html?category=architecture">Architecture</a></li>
+            <li><a href="blogs.html?category=design">Industrial Design</a></li>
+            <li><a href="blogs.html?category=technology">Sound & Voltage</a></li>
+            <li><a href="blogs.html?category=culture">Atelier Life</a></li>
+            <li><a href="blogs.html?category=philosophy">Slow Media</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Colophon</div>
+          <ul class="footer-links-list">
+            <li><span class="text-secondary">Typefaces: Syne & Plus Jakarta</span></li>
+            <li><span class="text-secondary">Stack: Pure HTML5, CSS3, Vanilla JS</span></li>
+            <li><a href="contact.html">Press Kit & Brand Assets</a></li>
+            <li><a href="contact.html">Colophon & Masthead</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 Marvy Journal Ltd. All rights reserved. Tactile craft over digital noise.</div>
+        <div style="display:flex; gap: 1.5rem;">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Dispatch</a>
+          <a href="#">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Article Reader Drawer / Slide-Over Modal -->
+  <div class="reader-modal-overlay" id="reader-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="reader-post-title">
+    <div class="reader-modal-drawer">
+      <div class="reader-drawer-header">
+        <div class="reader-header-meta">
+          <span class="ticker-dot"></span>
+          <span id="reader-post-date">OCTOBER 04, 2026</span>
+          <span>·</span>
+          <span id="reader-post-readtime">7 MIN READ</span>
+        </div>
+        <button class="reader-close-btn" id="reader-close-btn" aria-label="Close article reader">✕</button>
+      </div>
+
+      <div class="reader-drawer-body">
+        <span class="reader-article-category" id="reader-post-category">Architecture</span>
+        <h1 class="reader-article-title" id="reader-post-title">The Poetics of Raw Concrete</h1>
+        <p class="reader-article-subtitle" id="reader-post-subtitle">How monolithic brutalism transforms natural light, human silence, and physical permanence in contemporary dwellings.</p>
+        
+        <div class="reader-cover-media">
+          <img id="reader-post-cover" src="media/hero-architecture.jpg" alt="Article Cover">
+        </div>
+
+        <div class="author-pill" style="margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle);">
+          <img id="reader-post-author-avatar" src="media/editor-portrait.jpg" alt="Author avatar">
+          <div>
+            <div class="author-info-name" id="reader-post-author-name">Elena Vance</div>
+            <div class="author-info-role" id="reader-post-author-role">Architecture Critic & Essayist</div>
+          </div>
+        </div>
+
+        <div class="reader-content-prose" id="reader-post-content">
+          <!-- Dynamic post content inserted here -->
+        </div>
+
+        <div class="reader-tags-row" id="reader-post-tags">
+          <!-- Tags inserted here -->
+        </div>
+
+        <div class="reader-actions-bar">
+          <div style="display:flex; gap: 0.75rem;">
+            <button class="btn-reader-action" id="reader-like-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+              <span>Applaud</span>
+            </button>
+            <button class="btn-reader-action" id="reader-bookmark-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <span>Save to Reading List</span>
+            </button>
+          </div>
+          <div>
+            <button class="btn-reader-action" id="reader-share-btn" title="Copy share link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+              </svg>
+              <span>Share</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script/data.js"></script>
+  <script src="script/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Marvy: our editorial manifesto, publishing ethics, metrics, and the team dedicated to slow journalism, architectural permanence, and physical craft.">
+  <title>About Marvy — The Editorial Manifesto & Masthead</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23ff5733'/></svg>">
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress-bar"></div>
+
+  <!-- Top Editorial Ticker Tape -->
+  <div class="ticker-bar" aria-label="Editorial News Ticker">
+    <div class="ticker-track">
+      <div class="ticker-item"><span class="ticker-dot"></span> MARVY MANIFESTO // DEPTH OVER VELOCITY</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> NO ALGORITHMIC FEED // ZERO SPONSORED NOISE</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> INDEPENDENT QUARTERLY VOLUMES PRINTED ON FSC CERTIFIED STOCK</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> EDITORIAL OFFICES IN LONDON & TOKYO</div>
+      <!-- Duplicate for infinite loop -->
+      <div class="ticker-item"><span class="ticker-dot"></span> MARVY MANIFESTO // DEPTH OVER VELOCITY</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> NO ALGORITHMIC FEED // ZERO SPONSORED NOISE</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> INDEPENDENT QUARTERLY VOLUMES PRINTED ON FSC CERTIFIED STOCK</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> EDITORIAL OFFICES IN LONDON & TOKYO</div>
+    </div>
+  </div>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" id="site-brand-logo">
+        MARVY<span class="brand-dot"></span>
+        <span class="brand-tag">VOL. 14</span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li><a href="about.html" class="nav-link active" id="nav-about">About</a></li>
+          <li><a href="blogs.html" class="nav-link" id="nav-blogs">Blogs</a></li>
+          <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="blogs.html?filter=bookmarked" class="bookmark-counter-btn" id="bookmark-counter-btn" title="View Bookmarked Articles">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span>Saved</span>
+          <span class="badge-count badge-bookmark-count">0</span>
+        </a>
+        <a href="contact.html" class="btn-header-cta">Pitch Editorial</a>
+        <button class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Overlay -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2.5rem;">
+        <span class="brand-logo" style="font-size: 1.4rem;">MARVY<span class="brand-dot"></span></span>
+        <button class="reader-close-btn" id="mobile-drawer-close" aria-label="Close Mobile Menu">✕</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home <span>→</span></a></li>
+        <li><a href="about.html" class="mobile-nav-link active">About <span>→</span></a></li>
+        <li><a href="blogs.html" class="mobile-nav-link">Blogs <span>→</span></a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact <span>→</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-mono text-muted" style="font-size: 0.75rem; margin-bottom: 1rem;">CRAFT & MATERIALITY ARCHIVE</p>
+      <a href="contact.html" class="btn-header-cta" style="width: 100%; justify-content: center;">Submit an Essay Pitch</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Section 1: Intro Header -->
+    <section class="page-intro-header">
+      <div class="container">
+        <span class="intro-eyebrow">The Manifesto & Ethics</span>
+        <h1 class="intro-headline">
+          In an era of disposable digital noise, we build an archive of permanence.
+        </h1>
+        <p class="intro-subheading">
+          Marvy was established in 2022 as a deliberate counterweight to the frantic 24-hour cycle of algorithmic commentary. We publish longform essays on architecture, tangible industrial objects, and contemplative culture.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Trust Metrics Bar -->
+    <section aria-label="Publication Metrics">
+      <div class="container">
+        <div class="metrics-strip">
+          <div class="metric-cell">
+            <span class="metric-number">180+</span>
+            <span class="metric-label">In-Depth Field Essays</span>
+          </div>
+          <div class="metric-cell">
+            <span class="metric-number">45K</span>
+            <span class="metric-label">Subscribers in 62 Countries</span>
+          </div>
+          <div class="metric-cell">
+            <span class="metric-number">0%</span>
+            <span class="metric-label">Synthetic AI Filler or Clickbait</span>
+          </div>
+          <div class="metric-cell">
+            <span class="metric-number">14</span>
+            <span class="metric-label">Quarterly Volumes Archived</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Story Split -->
+    <section class="editorial-section">
+      <div class="container">
+        <div class="about-story-split">
+          
+          <div class="story-prose">
+            <span class="font-mono text-accent" style="font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">
+              Our Philosophy
+            </span>
+            <h2 style="font-size: clamp(1.8rem, 3vw, 2.6rem); margin: 0.75rem 0 1.5rem;">
+              The antidote to the culture of the smooth.
+            </h2>
+            <p>
+              Every modern interface feels indistinguishable: rounded rectangles, glowing blue hyperlinks, and frictionless glass surfaces engineered to slide from one sponsored advertisement to the next.
+            </p>
+            <p>
+              We believe human beings possess hands, eyes, and minds that crave resistance. When you examine a concrete pavilion sculpted into coastal rocks or trace the milled metal dial of an analog synthesizer, you encounter physical truth. That friction is where memory lives.
+            </p>
+            <h3>How We Work</h3>
+            <p>
+              We do not chase breaking news or trending social media drama. Our writers travel to studios in Kyoto, fabricators in Zurich, and architectural sites in Valparaíso. We spend weeks in conversation, conduct hands-on material testing, and refuse to publish until an essay possesses real enduring value.
+            </p>
+            <div style="margin-top: 2rem;">
+              <a href="blogs.html" class="btn-header-cta" style="padding: 0.75rem 1.5rem;">
+                Read the Selected Dispatches →
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <div class="story-visual-card">
+              <img src="media/editor-portrait.jpg" alt="Elena Vance in the editorial atelier">
+              <div class="story-visual-caption">
+                <span class="font-mono text-accent">ATELIER ARCHIVE // LONDON</span><br>
+                Elena Vance, Editor-in-Chief, curating typography proofs and photography for Volume 14.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Core Editorial Principles -->
+    <section class="editorial-section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-head" style="margin-bottom: 1rem;">
+          <div>
+            <span class="font-mono text-accent" style="font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">
+              Editorial Pillars
+            </span>
+            <h2 class="section-title">The Four Non-Negotiables</h2>
+          </div>
+        </div>
+
+        <div class="values-grid">
+          
+          <div class="value-card">
+            <div class="value-index">[01]</div>
+            <h3 class="value-title">Physical Investigation</h3>
+            <p class="value-desc">
+              We never review an architectural space or an industrial object through a digital render. Our writers physically occupy the room, handle the prototype, and inspect the joints.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-index">[02]</div>
+            <h3 class="value-title">Zero Sponsored Clutter</h3>
+            <p class="value-desc">
+              We accept no pay-for-play editorial, no hidden affiliate kickbacks, and no tracking pixels. Our revenue derives purely from discerning subscribers and quarterly print editions.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-index">[03]</div>
+            <h3 class="value-title">Patience as an Ethic</h3>
+            <p class="value-desc">
+              If an essay requires three months of research to verify its assertions and hone its voice, we take three months. Depth is never sacrificed at the altar of publication frequency.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: The Masthead -->
+    <section class="editorial-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="font-mono text-accent" style="font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">
+              The Masthead
+            </span>
+            <h2 class="section-title">Editorial Collective</h2>
+            <p class="section-subtitle">Writers, critics, and visual chroniclers shaping each volume.</p>
+          </div>
+        </div>
+
+        <div class="magazine-grid">
+          
+          <div class="article-card" style="padding: 1.5rem;">
+            <div class="font-mono text-accent" style="font-size: 0.75rem; margin-bottom: 0.5rem;">FOUNDER & EDITOR-IN-CHIEF</div>
+            <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Elena Vance</h3>
+            <p class="text-secondary" style="font-size: 0.9rem; margin-bottom: 1.25rem;">
+              Former spatial theory fellow at Architectural Association London. Author of <em>Monolithic Silence</em> (2024).
+            </p>
+            <div class="font-mono text-muted" style="font-size: 0.75rem;">Based in London & Athens</div>
+          </div>
+
+          <div class="article-card" style="padding: 1.5rem;">
+            <div class="font-mono text-accent" style="font-size: 0.75rem; margin-bottom: 0.5rem;">INDUSTRIAL DESIGN EDITOR</div>
+            <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Marcus Thorne</h3>
+            <p class="text-secondary" style="font-size: 0.9rem; margin-bottom: 1.25rem;">
+              Materials researcher focusing on cold-forged alloys, stone masonry, and sensory ergonomics in hardware.
+            </p>
+            <div class="font-mono text-muted" style="font-size: 0.75rem;">Based in Zurich & Berlin</div>
+          </div>
+
+          <div class="article-card" style="padding: 1.5rem;">
+            <div class="font-mono text-accent" style="font-size: 0.75rem; margin-bottom: 0.5rem;">ACOUSTIC & TECH EDITOR</div>
+            <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Soren Lindqvist</h3>
+            <p class="text-secondary" style="font-size: 0.9rem; margin-bottom: 1.25rem;">
+              Sound designer and analog synthesizer technician. Investigates cognitive resonance and calm interfaces.
+            </p>
+            <div class="font-mono text-muted" style="font-size: 0.75rem;">Based in Stockholm</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <span class="brand-logo" style="font-size: 1.5rem;">MARVY<span class="brand-dot"></span></span>
+          <p class="footer-brand-bio">
+            An independent publication championing architectural gravity, physical craft, and contemplative technology. Edited in London and Tokyo.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About & Manifesto</a></li>
+            <li><a href="blogs.html">Archive & Dispatches</a></li>
+            <li><a href="contact.html">Editorial Pitch & Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Taxonomy</div>
+          <ul class="footer-links-list">
+            <li><a href="blogs.html?category=architecture">Architecture</a></li>
+            <li><a href="blogs.html?category=design">Industrial Design</a></li>
+            <li><a href="blogs.html?category=technology">Sound & Voltage</a></li>
+            <li><a href="blogs.html?category=culture">Atelier Life</a></li>
+            <li><a href="blogs.html?category=philosophy">Slow Media</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Colophon</div>
+          <ul class="footer-links-list">
+            <li><span class="text-secondary">Typefaces: Syne & Plus Jakarta</span></li>
+            <li><span class="text-secondary">Stack: Pure HTML5, CSS3, Vanilla JS</span></li>
+            <li><a href="contact.html">Press Kit & Brand Assets</a></li>
+            <li><a href="contact.html">Colophon & Masthead</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 Marvy Journal Ltd. All rights reserved. Tactile craft over digital noise.</div>
+        <div style="display:flex; gap: 1.5rem;">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Dispatch</a>
+          <a href="#">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script/data.js"></script>
+  <script src="script/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marvy is a modern, high-craft editorial publication exploring architecture, tactile industrial design, sound culture, and calm technology.">
+  <title>Marvy — Editorial Publication & Cultural Journal</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23ff5733'/></svg>">
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress-bar"></div>
+
+  <!-- Top Editorial Ticker Tape -->
+  <div class="ticker-bar" aria-label="Editorial News Ticker">
+    <div class="ticker-track">
+      <div class="ticker-item"><span class="ticker-dot"></span> MARVY JOURNAL // ISSUE NO. 14 IS NOW LIVE</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> ARCHITECTURE & MONOLITHIC MASS: THE POETICS OF RAW CONCRETE</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> RESISTANCE & VOLTAGE: WHY ANALOG SYNTHESIS WON'T DIE</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> ESSAY: SLOWNESS AS EDITORIAL REBELLION</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> PRINT VOLUMES DISPATCHED QUARTERLY WORLDWIDE</div>
+      <!-- Duplicate for infinite loop -->
+      <div class="ticker-item"><span class="ticker-dot"></span> MARVY JOURNAL // ISSUE NO. 14 IS NOW LIVE</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> ARCHITECTURE & MONOLITHIC MASS: THE POETICS OF RAW CONCRETE</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> RESISTANCE & VOLTAGE: WHY ANALOG SYNTHESIS WON'T DIE</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> ESSAY: SLOWNESS AS EDITORIAL REBELLION</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> PRINT VOLUMES DISPATCHED QUARTERLY WORLDWIDE</div>
+    </div>
+  </div>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" id="site-brand-logo">
+        MARVY<span class="brand-dot"></span>
+        <span class="brand-tag">VOL. 14</span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active" id="nav-home">Home</a></li>
+          <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+          <li><a href="blogs.html" class="nav-link" id="nav-blogs">Blogs</a></li>
+          <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="blogs.html?filter=bookmarked" class="bookmark-counter-btn" id="bookmark-counter-btn" title="View Bookmarked Articles">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span>Saved</span>
+          <span class="badge-count badge-bookmark-count">0</span>
+        </a>
+        <a href="#newsletter" class="btn-header-cta" id="header-cta-subscribe">Subscribe</a>
+        <button class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Overlay -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2.5rem;">
+        <span class="brand-logo" style="font-size: 1.4rem;">MARVY<span class="brand-dot"></span></span>
+        <button class="reader-close-btn" id="mobile-drawer-close" aria-label="Close Mobile Menu">✕</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link active">Home <span>→</span></a></li>
+        <li><a href="about.html" class="mobile-nav-link">About <span>→</span></a></li>
+        <li><a href="blogs.html" class="mobile-nav-link">Blogs <span>→</span></a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact <span>→</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-mono text-muted" style="font-size: 0.75rem; margin-bottom: 1rem;">CRAFT & MATERIALITY ARCHIVE</p>
+      <a href="blogs.html" class="btn-header-cta" style="width: 100%; justify-content: center;">Explore All Dispatches</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Section 1: Editorial Asymmetric Hero -->
+    <section class="editorial-hero" aria-label="Featured Story & Curated Dispatches">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Large Cover Story Card -->
+          <article class="hero-featured-card" id="hero-main-featured">
+            <div class="hero-cover-media">
+              <img src="media/hero-architecture.jpg" alt="Monolithic concrete modernist villa pavilion at twilight">
+            </div>
+            <div class="hero-cover-overlay"></div>
+            <div class="hero-featured-content">
+              <div>
+                <span class="badge-tag tag-accent">Lead Dispatch // Architecture</span>
+              </div>
+              <h1 class="hero-featured-title">
+                <a href="#" data-action="read-story" data-post-id="marvy-01">
+                  The Poetics of Raw Concrete: Architectural Solitude in Modernist Landscapes
+                </a>
+              </h1>
+              <p class="hero-featured-excerpt">
+                Monolithic structures do not compete with their surroundings; they command presence through deliberate silence and the textured gravity of cast stone.
+              </p>
+              <div class="hero-meta-bar">
+                <div class="author-pill">
+                  <img src="media/editor-portrait.jpg" alt="Elena Vance">
+                  <div>
+                    <div class="author-info-name">Elena Vance</div>
+                    <div class="author-info-role">Critic & Essayist · 7 min read</div>
+                  </div>
+                </div>
+                <button class="btn-read-story" data-action="read-story" data-post-id="marvy-01" style="font-size: 0.9rem;">
+                  Read Story <span>→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Aside: Ranked Trending Dispatches -->
+          <aside class="hero-aside">
+            <div class="hero-aside-header">
+              <span class="aside-title">
+                <span class="ticker-dot"></span> Curated Dispatches
+              </span>
+              <span class="font-mono text-muted" style="font-size: 0.72rem;">ISSUE NO. 14</span>
+            </div>
+
+            <div class="aside-list">
+              <!-- Item 01 -->
+              <div class="aside-item" data-action="read-story" data-post-id="marvy-02">
+                <div class="aside-rank">01</div>
+                <div>
+                  <div class="aside-body-category">Design & Materials</div>
+                  <h2 class="aside-item-title">Tactile Monoliths: Why Industrial Objects Are Rejecting Glossy Plastic</h2>
+                  <div class="aside-item-meta">
+                    <span>Marcus Thorne</span>
+                    <span>5 min read</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 02 -->
+              <div class="aside-item" data-action="read-story" data-post-id="marvy-03">
+                <div class="aside-rank">02</div>
+                <div>
+                  <div class="aside-body-category">Technology & Sound</div>
+                  <h2 class="aside-item-title">Voltage and Resistance: The Resurgence of Knobs, Dials & Raw Audio</h2>
+                  <div class="aside-item-meta">
+                    <span>Soren Lindqvist</span>
+                    <span>6 min read</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 03 -->
+              <div class="aside-item" data-action="read-story" data-post-id="marvy-05">
+                <div class="aside-rank">03</div>
+                <div>
+                  <div class="aside-body-category">Philosophy & Media</div>
+                  <h2 class="aside-item-title">Slowness as Rebellion: The Independent Magazine Manifesto</h2>
+                  <div class="aside-item-meta">
+                    <span>Elena Vance</span>
+                    <span>4 min read</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding-top: 1rem; border-top: 1px solid var(--border-subtle); display:flex; justify-content:space-between; align-items:center;">
+              <span class="font-mono text-muted" style="font-size: 0.72rem;">INDEX ARCHIVE (180+ ARTICLES)</span>
+              <a href="blogs.html" class="btn-read-story" style="font-size: 0.78rem;">View Full Index →</a>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Taxonomy Bar -->
+    <section class="category-bar-section" aria-label="Article Categories">
+      <div class="container category-bar-inner">
+        <div class="category-chips">
+          <a href="blogs.html" class="chip-btn active">All Topics</a>
+          <a href="blogs.html?category=architecture" class="chip-btn">Architecture</a>
+          <a href="blogs.html?category=design" class="chip-btn">Industrial Design</a>
+          <a href="blogs.html?category=technology" class="chip-btn">Sound & Tech</a>
+          <a href="blogs.html?category=culture" class="chip-btn">Atelier Culture</a>
+          <a href="blogs.html?category=philosophy" class="chip-btn">Philosophy</a>
+        </div>
+        <div class="category-indicator">
+          <span>SORTED BY EDITORIAL MERIT</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Recent Dispatches Magazine Grid -->
+    <section class="editorial-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="font-mono text-accent" style="font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">
+              Selected Features
+            </span>
+            <h2 class="section-title">Dispatches from the Atelier</h2>
+            <p class="section-subtitle">Meticulously reported stories on spatial proportion, material science, and intentional life.</p>
+          </div>
+          <a href="blogs.html" class="btn-header-cta" style="background-color: transparent; border: 1px solid var(--border-medium); color: var(--text-primary);">
+            Browse All (6)
+          </a>
+        </div>
+
+        <div class="magazine-grid">
+          
+          <!-- Card 1: Industrial Design -->
+          <article class="article-card" id="card-marvy-02">
+            <div class="card-media-wrapper">
+              <img src="media/design-minimal.jpg" alt="Sculptural obsidian stone industrial object" loading="lazy">
+              <div class="card-badge-overlay">
+                <span class="badge-tag">Design</span>
+              </div>
+              <div class="card-actions-overlay">
+                <button class="icon-action-btn" data-action="bookmark" data-post-id="marvy-02" title="Save to Reading List">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </button>
+                <button class="icon-action-btn" data-action="like" data-post-id="marvy-02" title="Applaud">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta-row">
+                <span>SEPTEMBER 28, 2026</span>
+                <span>5 MIN READ</span>
+              </div>
+              <h3 class="card-title">
+                <a href="#" data-action="read-story" data-post-id="marvy-02">Tactile Monoliths: Why Industrial Objects Are Rejecting Glossy Plastic</a>
+              </h3>
+              <p class="card-excerpt">
+                In a digital-first era where every interface is a smudge of glass, physical objects must justify their existence through sensory friction and heft.
+              </p>
+              <div class="card-footer">
+                <span class="card-author-name">Marcus Thorne</span>
+                <button class="btn-read-story" data-action="read-story" data-post-id="marvy-02">
+                  Read Story <span>→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Audio & Voltage -->
+          <article class="article-card" id="card-marvy-03">
+            <div class="card-media-wrapper">
+              <img src="media/sound-synth.jpg" alt="Vintage analog synthesizer with illuminated dials" loading="lazy">
+              <div class="card-badge-overlay">
+                <span class="badge-tag">Technology</span>
+              </div>
+              <div class="card-actions-overlay">
+                <button class="icon-action-btn" data-action="bookmark" data-post-id="marvy-03" title="Save to Reading List">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </button>
+                <button class="icon-action-btn" data-action="like" data-post-id="marvy-03" title="Applaud">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta-row">
+                <span>SEPTEMBER 19, 2026</span>
+                <span>6 MIN READ</span>
+              </div>
+              <h3 class="card-title">
+                <a href="#" data-action="read-story" data-post-id="marvy-03">Voltage and Resistance: The Resurgence of Knobs, Dials & Raw Audio</a>
+              </h3>
+              <p class="card-excerpt">
+                Why top producers are turning away from infinite drop-down menus in software to touch physical copper patch cords and potentiometers.
+              </p>
+              <div class="card-footer">
+                <span class="card-author-name">Soren Lindqvist</span>
+                <button class="btn-read-story" data-action="read-story" data-post-id="marvy-03">
+                  Read Story <span>→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Studio Culture -->
+          <article class="article-card" id="card-marvy-04">
+            <div class="card-media-wrapper">
+              <img src="media/studio-workspace.jpg" alt="Architectural workshop atelier in Kyoto" loading="lazy">
+              <div class="card-badge-overlay">
+                <span class="badge-tag">Culture</span>
+              </div>
+              <div class="card-actions-overlay">
+                <button class="icon-action-btn" data-action="bookmark" data-post-id="marvy-04" title="Save to Reading List">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </button>
+                <button class="icon-action-btn" data-action="like" data-post-id="marvy-04" title="Applaud">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta-row">
+                <span>SEPTEMBER 12, 2026</span>
+                <span>8 MIN READ</span>
+              </div>
+              <h3 class="card-title">
+                <a href="#" data-action="read-story" data-post-id="marvy-04">Sanctuary of the Atelier: Rituals of Modern Architectural Studios</a>
+              </h3>
+              <p class="card-excerpt">
+                Physical models carved in balsa wood and hand-inked trace paper remain irreplaceable tools for feeling spatial proportion before software ever opens.
+              </p>
+              <div class="card-footer">
+                <span class="card-author-name">Aoi Takahashi</span>
+                <button class="btn-read-story" data-action="read-story" data-post-id="marvy-04">
+                  Read Story <span>→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Editorial Pull Quote Banner -->
+    <section class="editorial-quote-banner" aria-label="Editorial Quote">
+      <div class="quote-inner">
+        <blockquote class="quote-text">
+          “We do not need more commentary. We need better questions, deeper archives, and the courage to remain silent until something genuinely worth saying arrives.”
+        </blockquote>
+        <div class="quote-attribution">
+          — Elena Vance, Editor-in-Chief, Marvy Journal Vol. 14
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Newsletter Manifesto -->
+    <section class="newsletter-section" id="newsletter" aria-label="Newsletter Subscription">
+      <div class="container">
+        <div class="newsletter-box">
+          <div>
+            <span class="font-mono text-accent" style="font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">
+              The Sunday Dispatch
+            </span>
+            <h2 class="newsletter-title">Slow reading delivered directly to your inbox.</h2>
+            <p class="newsletter-desc">
+              Every Sunday morning, we send a single curated essay on design, spatial philosophy, or material culture. Zero advertisements. Zero algorithmic noise.
+            </p>
+          </div>
+          <div>
+            <form class="newsletter-form" id="home-newsletter-form">
+              <div class="newsletter-input-group">
+                <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email address for newsletter">
+                <button type="submit" class="btn-newsletter">Receive Dispatch</button>
+              </div>
+              <p class="newsletter-notice">
+                Join 45,000+ readers. Unsubscribe at any moment with a single click.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <span class="brand-logo" style="font-size: 1.5rem;">MARVY<span class="brand-dot"></span></span>
+          <p class="footer-brand-bio">
+            An independent publication championing architectural gravity, physical craft, and contemplative technology. Edited in London and Tokyo.
+          </p>
+          <div style="margin-top: 1.5rem;" class="font-mono text-muted">
+            ISSN 2841-9032 // PRINT & DIGITAL
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About & Manifesto</a></li>
+            <li><a href="blogs.html">Archive & Dispatches</a></li>
+            <li><a href="contact.html">Editorial Pitch & Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Taxonomy</div>
+          <ul class="footer-links-list">
+            <li><a href="blogs.html?category=architecture">Architecture</a></li>
+            <li><a href="blogs.html?category=design">Industrial Design</a></li>
+            <li><a href="blogs.html?category=technology">Sound & Voltage</a></li>
+            <li><a href="blogs.html?category=culture">Atelier Life</a></li>
+            <li><a href="blogs.html?category=philosophy">Slow Media</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Colophon</div>
+          <ul class="footer-links-list">
+            <li><span class="text-secondary">Typefaces: Syne & Plus Jakarta</span></li>
+            <li><span class="text-secondary">Stack: Pure HTML5, CSS3, Vanilla JS</span></li>
+            <li><a href="contact.html">Press Kit & Brand Assets</a></li>
+            <li><a href="contact.html">Colophon & Masthead</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 Marvy Journal Ltd. All rights reserved. Tactile craft over digital noise.</div>
+        <div style="display:flex; gap: 1.5rem;">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Dispatch</a>
+          <a href="#">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Article Reader Drawer / Slide-Over Modal -->
+  <div class="reader-modal-overlay" id="reader-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="reader-post-title">
+    <div class="reader-modal-drawer">
+      <div class="reader-drawer-header">
+        <div class="reader-header-meta">
+          <span class="ticker-dot"></span>
+          <span id="reader-post-date">OCTOBER 04, 2026</span>
+          <span>·</span>
+          <span id="reader-post-readtime">7 MIN READ</span>
+        </div>
+        <button class="reader-close-btn" id="reader-close-btn" aria-label="Close article reader">✕</button>
+      </div>
+
+      <div class="reader-drawer-body">
+        <span class="reader-article-category" id="reader-post-category">Architecture</span>
+        <h1 class="reader-article-title" id="reader-post-title">The Poetics of Raw Concrete</h1>
+        <p class="reader-article-subtitle" id="reader-post-subtitle">How monolithic brutalism transforms natural light, human silence, and physical permanence in contemporary dwellings.</p>
+        
+        <div class="reader-cover-media">
+          <img id="reader-post-cover" src="media/hero-architecture.jpg" alt="Article Cover">
+        </div>
+
+        <div class="author-pill" style="margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle);">
+          <img id="reader-post-author-avatar" src="media/editor-portrait.jpg" alt="Author avatar">
+          <div>
+            <div class="author-info-name" id="reader-post-author-name">Elena Vance</div>
+            <div class="author-info-role" id="reader-post-author-role">Architecture Critic & Essayist</div>
+          </div>
+        </div>
+
+        <div class="reader-content-prose" id="reader-post-content">
+          <!-- Dynamic post content inserted here -->
+        </div>
+
+        <div class="reader-tags-row" id="reader-post-tags">
+          <!-- Tags inserted here -->
+        </div>
+
+        <div class="reader-actions-bar">
+          <div style="display:flex; gap: 0.75rem;">
+            <button class="btn-reader-action" id="reader-like-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+              <span>Applaud</span>
+            </button>
+            <button class="btn-reader-action" id="reader-bookmark-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <span>Save to Reading List</span>
+            </button>
+          </div>
+          <div>
+            <button class="btn-reader-action" id="reader-share-btn" title="Copy share link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+              </svg>
+              <span>Share</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script/data.js"></script>
+  <script src="script/main.js"></script>
+</body>
+</html>

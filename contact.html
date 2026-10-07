@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Marvy Journal: Editorial essay pitches, book review proposals, print distribution inquiries, and atelier bureau contacts in London and Tokyo.">
+  <title>Contact & Pitches — Marvy Editorial Journal</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23ff5733'/></svg>">
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress-bar"></div>
+
+  <!-- Top Editorial Ticker Tape -->
+  <div class="ticker-bar" aria-label="Editorial News Ticker">
+    <div class="ticker-track">
+      <div class="ticker-item"><span class="ticker-dot"></span> CALL FOR ESSAYS // VOLUME 15 'TEXTURE & WEIGHT' IS OPEN FOR SUBMISSIONS</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> EDITORIAL RESPONSE WINDOW: WITHIN 5 WORKING DAYS</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> ENCRYPTED PGP CORRESPONDENCE WELCOMED</div>
+      <!-- Duplicate for infinite loop -->
+      <div class="ticker-item"><span class="ticker-dot"></span> CALL FOR ESSAYS // VOLUME 15 'TEXTURE & WEIGHT' IS OPEN FOR SUBMISSIONS</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> EDITORIAL RESPONSE WINDOW: WITHIN 5 WORKING DAYS</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> ENCRYPTED PGP CORRESPONDENCE WELCOMED</div>
+    </div>
+  </div>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" id="site-brand-logo">
+        MARVY<span class="brand-dot"></span>
+        <span class="brand-tag">VOL. 14</span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+          <li><a href="blogs.html" class="nav-link" id="nav-blogs">Blogs</a></li>
+          <li><a href="contact.html" class="nav-link active" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="blogs.html?filter=bookmarked" class="bookmark-counter-btn" id="bookmark-counter-btn" title="View Bookmarked Articles">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span>Saved</span>
+          <span class="badge-count badge-bookmark-count">0</span>
+        </a>
+        <a href="#editorial-contact-form" class="btn-header-cta">Send Pitch</a>
+        <button class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Overlay -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2.5rem;">
+        <span class="brand-logo" style="font-size: 1.4rem;">MARVY<span class="brand-dot"></span></span>
+        <button class="reader-close-btn" id="mobile-drawer-close" aria-label="Close Mobile Menu">✕</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home <span>→</span></a></li>
+        <li><a href="about.html" class="mobile-nav-link">About <span>→</span></a></li>
+        <li><a href="blogs.html" class="mobile-nav-link">Blogs <span>→</span></a></li>
+        <li><a href="contact.html" class="mobile-nav-link active">Contact <span>→</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-mono text-muted" style="font-size: 0.75rem; margin-bottom: 1rem;">CRAFT & MATERIALITY ARCHIVE</p>
+      <a href="blogs.html" class="btn-header-cta" style="width: 100%; justify-content: center;">Explore All Dispatches</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Section 1: Contact Header -->
+    <section class="page-intro-header" style="padding-bottom: var(--space-md);">
+      <div class="container">
+        <span class="intro-eyebrow">Correspondence & Submissions</span>
+        <h1 class="intro-headline">Initiate a dialogue with our editors.</h1>
+        <p class="intro-subheading">
+          Whether you have a completed essay, an architectural photo-essay, or an inquiry regarding quarterly print distribution, our bureaus read every submission carefully.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Contact Form & Bureau Info Grid -->
+    <section class="editorial-section">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <!-- Column 1: Bureaus & Direct Channels -->
+          <div class="contact-info-col">
+            
+            <div class="office-card">
+              <span class="badge-tag tag-accent" style="margin-bottom: 0.6rem;">London Bureau</span>
+              <h2 class="office-title">Editorial HQ & European Atelier</h2>
+              <div class="office-address">
+                42 Bloomsbury Way<br>
+                London WC1A 2RL, United Kingdom<br>
+                <span class="text-accent">london@marvyjournal.com</span>
+              </div>
+            </div>
+
+            <div class="office-card">
+              <span class="badge-tag tag-lime" style="margin-bottom: 0.6rem;">Tokyo Bureau</span>
+              <h2 class="office-title">Asia-Pacific Archival Studio</h2>
+              <div class="office-address">
+                5-7-22 Minami-Aoyama<br>
+                Minato-ku, Tokyo 107-0062, Japan<br>
+                <span class="text-accent">tokyo@marvyjournal.com</span>
+              </div>
+            </div>
+
+            <div class="office-card" style="border-left: 3px solid var(--accent-primary);">
+              <h3 style="font-size: 1rem; margin-bottom: 0.5rem; font-family: var(--font-mono); text-transform: uppercase;">
+                Submission Guidelines
+              </h3>
+              <p class="text-secondary" style="font-size: 0.88rem; line-height: 1.6;">
+                1. Pitches should be under 400 words with a clear structural thesis.<br>
+                2. Include 2–3 links to previously published essays or portfolio photography.<br>
+                3. We pay professional freelance honorariums upon editorial acceptance.
+              </p>
+            </div>
+
+            <div class="office-card">
+              <div class="font-mono text-muted" style="font-size: 0.72rem; margin-bottom: 0.4rem;">ENCRYPTED COMMUNICATON</div>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; word-break: break-all; color: var(--text-secondary);">
+                PGP: 4A89 7DF1 9C3B 602E 881F 5A74 B042 E2F1 99E0 1A3F
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Column 2: Interactive Form -->
+          <div class="contact-form-card">
+            
+            <form id="editorial-contact-form">
+              <span class="inquiry-types-label">Select Inquiry Discipline</span>
+              
+              <div class="inquiry-chip-selector" role="radiogroup" aria-label="Inquiry Type">
+                <label class="inquiry-radio-label">
+                  <input type="radio" name="inquiry_type" value="Essay Pitch" checked>
+                  <span>Essay Pitch</span>
+                </label>
+                <label class="inquiry-radio-label">
+                  <input type="radio" name="inquiry_type" value="Photo Series">
+                  <span>Photo Series</span>
+                </label>
+                <label class="inquiry-radio-label">
+                  <input type="radio" name="inquiry_type" value="Print Stockist">
+                  <span>Print Stockist</span>
+                </label>
+                <label class="inquiry-radio-label">
+                  <input type="radio" name="inquiry_type" value="Press / Media">
+                  <span>Press / Media</span>
+                </label>
+                <label class="inquiry-radio-label">
+                  <input type="radio" name="inquiry_type" value="General">
+                  <span>General</span>
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Elena Rostova" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="name@domain.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-affiliation">Studio / Publication / Institution (Optional)</label>
+                <input type="text" id="contact-affiliation" class="form-input" placeholder="e.g. Architectural Studio, Kyoto">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Working Title or Subject</label>
+                <input type="text" id="contact-subject" class="form-input" placeholder="e.g. Monolithic Mass in Southern Portugal" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Proposal Abstract or Inquiry</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Outline your thesis, core references, estimated word count, and available visual documentation..." required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-link">Draft or Portfolio URL (Optional)</label>
+                <input type="url" id="contact-link" class="form-input" placeholder="https://yourportfolio.com/essay-draft">
+              </div>
+
+              <button type="submit" class="btn-form-submit" id="contact-submit-btn">
+                <span>Dispatch to Editorial Board</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <span class="brand-logo" style="font-size: 1.5rem;">MARVY<span class="brand-dot"></span></span>
+          <p class="footer-brand-bio">
+            An independent publication championing architectural gravity, physical craft, and contemplative technology. Edited in London and Tokyo.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About & Manifesto</a></li>
+            <li><a href="blogs.html">Archive & Dispatches</a></li>
+            <li><a href="contact.html">Editorial Pitch & Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Taxonomy</div>
+          <ul class="footer-links-list">
+            <li><a href="blogs.html?category=architecture">Architecture</a></li>
+            <li><a href="blogs.html?category=design">Industrial Design</a></li>
+            <li><a href="blogs.html?category=technology">Sound & Voltage</a></li>
+            <li><a href="blogs.html?category=culture">Atelier Life</a></li>
+            <li><a href="blogs.html?category=philosophy">Slow Media</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Colophon</div>
+          <ul class="footer-links-list">
+            <li><span class="text-secondary">Typefaces: Syne & Plus Jakarta</span></li>
+            <li><span class="text-secondary">Stack: Pure HTML5, CSS3, Vanilla JS</span></li>
+            <li><a href="contact.html">Press Kit & Brand Assets</a></li>
+            <li><a href="contact.html">Colophon & Masthead</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 Marvy Journal Ltd. All rights reserved. Tactile craft over digital noise.</div>
+        <div style="display:flex; gap: 1.5rem;">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Dispatch</a>
+          <a href="#">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script/data.js"></script>
+  <script src="script/main.js"></script>
+</body>
+</html>
